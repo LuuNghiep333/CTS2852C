@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title> Pixel Art Drawing</title>
+  </head>
+
+  <body>
+    <section class="toolsBoard">
+      <input list="pallete" type="color" value="#EC7063" id="colorPick" onchange="displayColor();">
+      <datalist id="pallete">
+        <option value="#EC7063"></option>
+        <option value="#AF7AC5"></option>
+        <option value="#5DADE2"></option>
+        <option value="#48C9B0"></option>
+        <option value="#58D68D"></option>
+        <option value="#F4D03F"></option>
+        <option value="#EB984E"></option>
+        <option value="#F0F3F4"></option>
+        <option value="#AAB7B8"></option>
+        <option value="#5D6D7E"></option>
+      </datalist>
+      <input type="range" value="5" min="5" max="20" id="pixelSize" onInput="pixelSize = this.value">
+      <select id="tools">
+        <option>Draw</option>
+        <option>Erase</option>
+      </select>
+      <select id="shapes">
+        <option>Curve Line</option>
+        <option>Retangle</option>
+        <option>Triangle</option>
+        <option>Circle</option>
+      </select>
+      <label>
+        Fill Solid
+        <input type="checkbox" id="fillSolid">
+      </label>
+    </section>
+    <section class="paintBoard">
+      <canvas></canvas><br>
+        <button id="clear">Clear</button>
+        <button id="save">Save</button>
+        <input type="file" id="upload" accept="image/png">
+      </section>
+    </section>
+    <script src="paintFunction.js"></script>
+  </body>
+
+</html>
